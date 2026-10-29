@@ -53,7 +53,7 @@ class TaskResponse(BaseModel):
 
 
 # 4. Provide a database session for each request
-def get_db() -> Generator[Session, None, None]:
+def get_db():
     db = SessionLocal()
     try:
         yield db
